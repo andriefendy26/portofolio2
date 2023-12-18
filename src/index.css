@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.animation-hvrdark::after{
+    @apply after:content-[''] w-[0%]  bg-primaryTextWhite h-[2px] absolute bottom-0 left-0 duration-300 right-0
+}
+
+.animation-hvrdark:hover::after{
+    @apply w-[100%]
+}
+
+.animation-hvrlight::after{
+    @apply after:content-[''] w-[0%] bg-PrimaryBg h-[2px] absolute bottom-0 left-0 duration-300 right-0
+}
+
+.animation-hvrlight:hover::after{
+    @apply w-[100%]
+}
+
+.ham-linedark {
+    @apply block w-7 h-[2px] bg-primaryTextWhite my-2;
+}
+
+.ham-linelight {
+    @apply block w-7 h-[2px] bg-PrimaryBg my-2;
+}
+
+.ham-active > span:nth-child(1) {
+    @apply  rotate-45
+}
+
+.ham-active > span:nth-child(2) {
+    @apply opacity-0
+}
+
+.ham-active > span:nth-child(3) {
+    @apply  -rotate-45
+}
+
+.darkImg {
+    background : url("./components/img/Dark.jpg");
+    background-size : cover;
+}
+.lightImg {
+    background : url("./components/img/Light.jpg");
+    background-size : cover;
+}
